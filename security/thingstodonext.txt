@@ -1,0 +1,23 @@
+MAIN LANDING PAGE
+we can implement changes in the main landing page:
+- get most of the user info, for the basics first get the name of the user when they log on to the page.
+
+SET THE LIMITS OF SUCTOMER AND SELLER USER SETTINGS:
+- next i beleive there are some changes in oreder as to what kind of users should be there:
+    1) customer, can come here as the guest also but cannot do anything beyond the adding to the cart point 
+    2) seller, now sellers should have the access to 
+        a) sell any products
+        b) see how many of the products are selling
+    3) also one cannot have the same customer and seller
+
+OTHER FRONT END THINGS
+- try to figure out the photo things   
+- make the website pretty.  
+
+COUNTER OF THE CARTS REMOVING FOR THE CUSTOMER:
+- make the changes for the last time when removes the product from the cart and the counter in the products/ main landing page should go up.
+
+SOME HARD THINGS:
+- also introduce the category to the products
+- change the whole format of input to make entering the products easier for the sellers.
+                                                                                         

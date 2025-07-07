@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our E-Commerce Platform</h1>
+    </header>
+
+    <div th:replace="~{fragments/header :: navbar}"></div>
+
+    <div>
+        <p>Browse our wide range of products and enjoy seamless shopping!</p>
+    </div>
+
+</body>
+</html>

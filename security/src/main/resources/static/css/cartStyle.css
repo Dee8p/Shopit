@@ -1,0 +1,28 @@
+body {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+.btn-back {
+    margin-top: 20px;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 1.2em;
+    color: #6c757d;
+}

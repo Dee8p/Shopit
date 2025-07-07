@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" media="all" href="../static/css/login.css" th:href="@{/css/login.css}" />
+
+</head>
+<body>
+
+<div class="container">
+ 
+
+  <form method="post" th:action="@{/login}">
+    <h1> Please enter your username and password below:</h1>
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required /><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required /><br>
+      <input type="submit" name="login-submit" value="Log In" />
+      <br>
+      <br>
+      <a class="signupClass" th:href="@{/register}">Sign up</a>
+   <br> <br>
+    </div>
+
+    <div th:if="${param.error}">
+      <div class="error">
+        Invalid username or password. Please try again or sign up <a th:href="@{/register}">Sign up</a>
+      </div>
+    </div>
+
+    <div th:if="${param.logout}">
+      <div class="error">
+        You have been logged out.
+      </div>
+    </div>
+  </form>
+  <hr>
+  <p><a href="/">Back to home page</a></p>
+</div>
+<footer>
+ 
+</footer>
+</body>
+</html>

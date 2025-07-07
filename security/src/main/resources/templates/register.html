@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Registration</title>
+    <link rel="stylesheet" href="../static/css/register.css" th:href="@{/css/register.css}">
+
+</head>
+<body>
+<div class="container">
+    <h1>User Registration</h1>
+   
+    <form id="registrationForm" th:action="@{/register}" th:object="${register}" method="post" onsubmit="return validateForm()">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" th:field="*{email}" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" onkeyup="checkPasswordStrength(this.value)" required>
+        </div>
+        <div style="margin-top: 10px;">
+            <div id="passwordStrength" style="height: 20px; width: 100%; border: 1px solid #ccc; display: none;">
+                <div id="strengthBar" style="height: 100%; width: 10%; background-color: red;"></div>
+            </div>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" th:field="*{encryptedPassword}" required>
+        </div>
+        <div>
+            <div>
+                <label>Role:
+                    <select th:field="*{role}">
+                        <option th:value="1">Admin</option>
+                        <option th:value="2">User</option>
+                        <option th:value="3">Guest</option>
+                    </select>
+                </label>
+        </div>
+        <div>
+            <input type="submit" value="Register">
+        </div>
+        </div>
+    </form>
+</div>
+
+<script src="../static/js/register.js" th:src="@{/js/register.js}"></script>
+
+</body>
+</html>

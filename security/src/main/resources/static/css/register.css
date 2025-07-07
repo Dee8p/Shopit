@@ -1,0 +1,94 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Set the background color and font styles */
+body {
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+}
+
+/* Style the container for the registration form */
+.container {
+    background: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding around the content */
+    max-width: 400px; /* Max width for the form */
+    width: 100%; /* Full width on smaller screens */
+}
+
+/* Style the heading */
+h1 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5em; /* Size of the heading */
+    color: #333; /* Dark grey text for the heading */
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    margin: 10px 0; /* Margin above and below */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 1em; /* Font size */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Change button color on hover */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style the password strength meter */
+#passwordStrength {
+    margin: 10px 0; /* Margin above and below */
+    height: 20px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    display: none; /* Initially hidden */
+}
+
+#strengthBar {
+    height: 100%; /* Full height */
+    width: 0; /* Start with 0 width */
+    background-color: red; /* Initial color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Style for footer */
+footer {
+    margin-top: 20px; /* Space above the footer */
+}
+
+/* Style the link to the home page */
+a {
+    color: #007BFF; /* Bootstrap blue */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

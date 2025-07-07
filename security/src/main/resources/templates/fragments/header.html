@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopiT</title>
+    <style>
+        /* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #131921;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff9900;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #ffa31a;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            flex-grow: 1;
+            margin: 0 20px;
+            max-width: 600px;
+            position: relative;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-bar button {
+            background-color: #febd69;
+            border: none;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #f3a847;
+        }
+
+        /* User Section */
+        .user-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-section p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .user-section a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .user-section a:hover {
+            color: #febd69;
+        }
+
+        /* Cart */
+        .cart {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .cart:hover {
+            transform: scale(1.1);
+        }
+
+        .cart span {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: #ff9900;
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .search-bar {
+                width: 100%;
+                max-width: 100%;
+                margin: 10px 0;
+            }
+
+            .user-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header th:fragment="navbar">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="/products" class="logo">ShopIt</a>
+    
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search ShopIt">
+                <button>🔍</button>
+            </div>
+    
+            <!-- User Section -->
+            <div class="user-section">
+                <!-- Sign-In -->
+                <p th:text="${username}">Hello, User</p>
+            </div>
+    
+            <!-- Cart -->
+            <div class="cart">
+                <a href="/cart">🛒 <span>Cart</span></a>
+           
+            </div>
+        </div>
+    </header>
+
